@@ -20,9 +20,9 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t my-python-app:latest .
+          docker build -t bickkumar044/my-python-app:latest .
           # docker push my-python-app:latest
-          docker push my-python-app:latest
+          docker push bickkumar044/my-python-app:latest
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
