@@ -22,7 +22,7 @@ jobs:
         run: |
           docker build -t my-python-app:latest .
           # docker push my-python-app:latest
-          docker push bickkumar044/my-python-app:latest
+          docker push my-python-app:latest
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
