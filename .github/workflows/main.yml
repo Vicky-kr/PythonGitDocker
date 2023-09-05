@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Login to Docker Hub
-        uses: docker/login-action@v1
+        uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
@@ -22,8 +22,7 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build -t my-python-app:latest .
-          docker tag my-python-app:latest bickkumar044/my-python-app:latest
-          docker push bickkumar044/my-python-app:latest
+          docker push my-python-app:latest
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
